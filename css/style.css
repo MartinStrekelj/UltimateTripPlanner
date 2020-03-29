@@ -1,0 +1,249 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Fredoka One', cursive;
+}
+
+
+
+/*  Body grid declaration */
+body{
+    display: grid;
+    grid-template-rows: 
+        1fr [start] 
+        2fr [r1-start] 
+        7fr [r2-start]
+        4fr [r3-start]
+        5fr [r4-start]
+        2fr [end];
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+}
+/* ________________ */
+
+/* Navigation */
+nav{
+    grid-column: span 6;
+}
+
+.nav-container{
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 
+    3fr 1fr;
+    align-items: center;
+    justify-items: center;
+    background-color: #222;
+    list-style-type: none;
+    padding: 10px;
+}
+
+.nav-container a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-container .about a:hover{
+    border-bottom: #51e898 3px solid;
+}
+
+.logo{
+    font-size: 1.9em;
+}
+
+.about{
+    font-size: 1.4em;
+}
+
+/* _______________________ */
+
+/* Main content */
+
+button, input{
+    border-radius: 30px;
+    border: 2px solid #222;
+    font-family: 'Fredoka One', cursive;
+}
+
+input{
+    padding: 10px;
+    text-align: center; 
+}
+
+input:focus{
+    border:  3px solid #51e898;
+    font-size: 1.2em;
+}
+
+button{
+    font-size: 1.2em;
+}
+
+button:hover{
+    border:  3px solid #51e898
+}
+
+
+/* Location inputs */
+.inputs-container{
+    grid-row: start / r1-start;
+    grid-column: span 6;
+
+    display: grid;
+    grid-template-rows: 
+        1fr [start]
+        1fr [r-2]
+        1fr [r-3]
+        1fr [end];
+    grid-template-columns: 1fr [start] 1fr[col_1] 1fr [col-2] 1fr[col-3] 1fr[end];
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.location_input{
+    grid-row: r-2 / r-4;
+}
+
+.inputs-container label {
+    grid-row : start / r-2;
+    padding: 2px;
+    grid-column: span 2;
+}
+
+.input1{
+    grid-column: span 2 ;
+}
+
+.input2{
+    grid-column: span 2;
+}
+
+.maps-container{
+    grid-row: r1-start / r3-start;
+    grid-column: span 4;
+    background-color: green;
+}
+
+.budget-container{
+    grid-row: r1-start / r3-start;
+    grid-column: span 2;
+    background-color: chartreuse;
+}
+
+.item-list-container{
+    grid-row: r3-start / r4-start;
+    grid-column: span 6;
+    background-color: chocolate;
+}
+
+/* _____________________________________*/
+
+
+/* Footer */
+
+footer{
+    grid-row: r4-start / end;
+    grid-column: span 6;
+    background-color: #222;
+    text-align: center;
+    padding: 1.5em;
+    color: #fff;
+}
+
+/* _____________________________________*/
+
+/* Mobile view */
+
+@media only screen and (max-width: 600px){
+
+    .nav-container{
+        height: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 
+        3fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* Inputs */
+    .inputs-container{
+        grid-row: start / r1-start;
+        grid-column: span 6;
+
+        display: grid;
+        grid-template-rows: 
+            1fr [start]
+            1fr [r-2]
+            2fr [r-3]
+            1fr [r-4]
+            2fr [end];
+        grid-template-columns: 1fr [start] 1fr[col_1] 1fr [col-2] 1fr[col-3] 1fr[end];
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .inputs-container .label1 {
+        grid-row : start / r-2;
+        padding: 2px;
+        grid-column: span 3;
+    }
+
+ 
+
+    .inputs-container .label2 {
+        grid-row : r-3 / r-4;
+        padding: 2px;
+        grid-column: span 3;
+    }
+
+
+    .inputs-container label {
+        padding: 2px;
+        margin: 0;
+    }
+
+    .input1{
+        grid-row: r-2 / r-3;
+        grid-column: span 3 ;
+    }
+
+    .input2{
+        grid-row: r-4 / end;
+        grid-column: span 3;
+    }
+
+    .btn-submitLocation{
+        grid-row: r-4 / end;
+        grid-column: span 3;
+    }
+
+
+
+    /* ____________________ */
+
+    .maps-container{
+        grid-row: r1-start / r2-start;
+        grid-column: span 6;
+    }
+
+    .budget-container{
+        grid-row: r2-start / r3-start;
+        grid-column: span 6;
+    }
+
+    .item-list-container{
+        grid-row: r3-start / r4-start;
+        grid-column: span 6;
+    }
+
+    footer{
+        grid-row: r4-start / end;
+        grid-column: span 6;
+        font-size: 0.6em;
+    }
+}
+
+/* ____________________ */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Trip Planner</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">  
+
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+                <div class="nav-item logo"><a href="">Ultimate Trip Planner</a></div>
+                <div class="nav-item about"><a href="about.html">About</a></div>
+        <div>
+    </nav>
+    <div class="inputs-container">
+            <label class="label1">Current location</label>
+            <label class="label2">Destination</label>
+            <input class="location_input input1"  type="text" placeholder="Where are you from?" name="location">
+            <input class="location_input input2"  type="text" placeholder="Where are you going?" name="destination">
+            <button class="location_input btn-submitLocation" type="submit">Lets go!</button>
+    </div>
+    <div class="maps-container" id="googleMap">
+        <!-- Implement google maps -->
+        <!-- Get distance based on form above -->
+    </div>
+    <div class="budget-container">
+        <!-- Input za razpoložljiv budget -->
+        <!-- Izračunana razdalja glede na google maps ->  input cena goriva -->
+        <!-- Inputi za predvidene stroške -->
+        <!-- Izračun porabljenih stroškov - output -->
+    </div>
+    <div class="item-list-container">
+        <!-- list of items -->
+        <!-- add item -->
+        <!-- add quantity -->
+        <!-- Delete button to remove each one -->
+        <!-- Double click to strike-through -->
+        <!-- Button to clear all -->
+    </div>
+    <footer>
+        <!-- Simple footer with my name and copyrights -->
+        <p>Created by Martin Štrekelj - Web Development hw1 </p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=myMap"></script>
+</body>
+</html>
