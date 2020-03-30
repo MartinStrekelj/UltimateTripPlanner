@@ -27,10 +27,20 @@
         <!-- Get distance based on form above -->
     </div>
     <div class="budget-container">
+        <div class="title-budget"><h3>Budget Calculator</h3></div>
         <!-- Input za razpoložljiv budget -->
+        <label>Total budget</label>
+        <input type="number" step="100" placeholder="Budget">
         <!-- Izračunana razdalja glede na google maps ->  input cena goriva -->
-        <!-- Inputi za predvidene stroške -->
-        <!-- Izračun porabljenih stroškov - output -->
+        <label>Gas</label>
+        <input type="number" step="0.01" placeholder="Gas price per l">
+        <input type="number" step="0.1"  placeholder="Car consumption">
+        <!-- Inputi za predvidene ostale stroške -->
+        <label>Other estimated costs</label>
+        <input type="number"  step="10" placeholder="Living expense">
+        <input type="number"  step="10" placeholder="Other">
+         <!-- Izračun porabljenih stroškov - output -->
+        <div class="budget-output">output</div>
     </div>
     <div class="item-list-container">
         <!-- list of items -->
@@ -42,9 +52,9 @@
     </div>
     <footer>
         <!-- Simple footer with my name and copyrights -->
-        <p>Created by Martin Štrekelj - Web Development hw1 </p>
+        <p>Created by Martin Štrekelj - Web Development HW1 </p>
     </footer>
     <script src="script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=myMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXFI4LIeSBZM8gCj2L8SE9QoOJvlBd794&callback=myMap"></script>
 </body>
 </html>
