@@ -18,8 +18,8 @@
     <div class="inputs-container">
             <label class="label1">Current location</label>
             <label class="label2">Destination</label>
-            <input class="location_input input1"  type="text" placeholder="Where are you from?" name="location">
-            <input class="location_input input2"  type="text" placeholder="Where are you going?" name="destination">
+            <input class="location_input input1" id="location-input"  type="text" placeholder="Where are you from?" name="location">
+            <input class="location_input input2" id="destination-input" type="text" placeholder="Where are you going?" name="destination">
             <button class="location_input btn-submitLocation" type="submit">Lets go!</button>
     </div>
     <div class="maps-container" id="googleMap">
@@ -30,28 +30,43 @@
         <div class="title-budget"><h3>Budget Calculator</h3></div>
         <!-- Input za razpoložljiv budget -->
         <label>Total budget</label>
-        <input type="number" step="100" placeholder="Budget">
+        <input type="number" id="budget" step="100" placeholder="Budget">
         <!-- Izračunana razdalja glede na google maps ->  input cena goriva -->
         <label>Gas</label>
-        <input type="number" step="0.01" placeholder="Gas price per l">
-        <input type="number" step="0.1"  placeholder="Car consumption">
+        <input type="number" id="gas-price" step="0.01" placeholder="Gas price per l">
+        <input type="number" id="car-consumption" step="0.1"  placeholder="Car consumption">
         <!-- Inputi za predvidene ostale stroške -->
         <label>Other estimated costs</label>
         <input type="number"  step="10" placeholder="Living expense">
         <input type="number"  step="10" placeholder="Other">
          <!-- Izračun porabljenih stroškov - output -->
-        <div class="budget-output">output</div>
+        <div id="output" class="budget-output">output</div>
     </div>
     <div class="item-list-container">
-        <!-- list of items -->
-        <!-- add item -->
-        <!-- add quantity -->
-        <!-- Delete button to remove each one -->
-        <!-- Double click to strike-through -->
-        <!-- Button to clear all -->
+        <div class="Item-list-wrapper">
+            <!-- list of items -->
+            <div>
+            <!-- double click to remove each one -->
+                <h3>Packing list</h3>
+                <ul id="item-list">
+
+                </ul>
+            </div>
+        </div>
+        <div class="add-item-wrapper"> 
+            <div>
+                <!-- add item -->
+                <input type="text" id="new-item" placeholder="Item name">
+            </div>
+            <div>
+                <!-- Button to clear all items -->
+                <button id="add-item-btn">Add item</button>
+                <button id="clear-list-btn">Clear list</button>
+            </div>
+        </div>
     </div>
     <footer>
-        <!-- Simple footer with my name and copyrights -->
+        <!-- Simple footer with my name and "copyrights" -->
         <p>Created by Martin Štrekelj - Web Development HW1 </p>
     </footer>
     <script src="script.js"></script>

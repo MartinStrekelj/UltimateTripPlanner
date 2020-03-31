@@ -53,6 +53,10 @@ nav{
     font-size: 1.9em;
 }
 
+.logo a{
+    color: #51e898;
+}
+
 .about{
     font-size: 1.4em;
 }
@@ -74,11 +78,11 @@ input{
 
 input:focus{
     border:  3px solid #51e898;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 button{
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 button:hover{
@@ -152,12 +156,43 @@ button:hover{
     padding: 5px;
 }
 
+/* Add item */
 
 .item-list-container{
     grid-row: r3-start / r4-start;
     grid-column: span 4;
-    background-color: chocolate;
+    background-color: #fff;
+    border: 2px solid #222;
+    padding: 15px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
+
+.add-item-wrapper{
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(3, 1fr);
+    border-left: #51e898 2px solid;
+    align-items: center;
+    justify-items: center;
+}
+
+.add-item-wrapper input:focus{
+    font-size: 1em;
+}
+
+#item-list{
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: auto;
+    grid-row-gap: 10px;
+}
+
+
+/* _____________________________________ */
 
 /* _____________________________________*/
 
@@ -275,7 +310,25 @@ footer{
     .item-list-container{
         grid-row: r3-start / r4-start;
         grid-column: span 6;
+
+        text-align: center;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
     }
+    .add-item-wrapper{
+
+        border-top: 2px solid #51e898;
+        padding-top: 30px;
+        border-left: none;
+    }
+
+    #item-list{
+        font-size: 0.8em;
+    }
+
+
 
     footer{
         grid-row: r4-start / end;
