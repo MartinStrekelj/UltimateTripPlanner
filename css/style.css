@@ -16,7 +16,7 @@ body{
         7fr [r2-start]
         4fr [r3-start]
         8fr [r4-start]
-        2fr [end];
+        1fr [end];
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 5px;
 }
@@ -131,6 +131,10 @@ button:hover{
     padding: 5px;
 }
 
+#googleMap{
+    height: 100%;
+}
+
 .budget-container{
     grid-row: r1-start / r4-start;
     grid-column: span 2;
@@ -154,6 +158,7 @@ button:hover{
 .budget-output{
     border-top: #51e898 2px solid;
     padding: 5px;
+    text-align: center;
 }
 
 /* Add item */

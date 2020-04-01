@@ -13,14 +13,14 @@
         <div class="nav-container">
                 <div class="nav-item logo"><a href="">Ultimate Trip Planner</a></div>
                 <div class="nav-item about"><a href="about.html">About</a></div>
-        <div>
+        </div>
     </nav>
     <div class="inputs-container">
             <label class="label1">Current location</label>
             <label class="label2">Destination</label>
             <input class="location_input input1" id="location-input"  type="text" placeholder="Where are you from?" name="location">
             <input class="location_input input2" id="destination-input" type="text" placeholder="Where are you going?" name="destination">
-            <button class="location_input btn-submitLocation" type="submit">Lets go!</button>
+            <button class="location_input btn-submitLocation" id="btn-submitLocation" type="submit">Lets go!</button>
     </div>
     <div class="maps-container" id="googleMap">
         <!-- Implement google maps -->
@@ -30,17 +30,18 @@
         <div class="title-budget"><h3>Budget Calculator</h3></div>
         <!-- Input za razpoložljiv budget -->
         <label>Total budget</label>
-        <input type="number" id="budget" step="100" placeholder="Budget">
+        <input class="budget-input" min="0" type="number" id="budget" step="100" placeholder="Budget €">
         <!-- Izračunana razdalja glede na google maps ->  input cena goriva -->
-        <label>Gas</label>
-        <input type="number" id="gas-price" step="0.01" placeholder="Gas price per l">
-        <input type="number" id="car-consumption" step="0.1"  placeholder="Car consumption">
+        <label id="distance-label">Gas</label>
+        <input class="budget-input" min="0" type="number" id="gas-price" step="0.01" placeholder="Gas price € per l">
+        <input class="budget-input" min="0" type="number" id="car-consumption" step="0.1"  placeholder="Car l /100km">
         <!-- Inputi za predvidene ostale stroške -->
         <label>Other estimated costs</label>
-        <input type="number"  step="10" placeholder="Living expense">
-        <input type="number"  step="10" placeholder="Other">
+        <input class="budget-input"  min="0" type="number" id="living" step="10" placeholder="Living expense €">
+        <input type="number"  min="0" step="10"  id="other-costs" placeholder="Other €">
          <!-- Izračun porabljenih stroškov - output -->
-        <div id="output" class="budget-output">output</div>
+         <button id="calculate-btn">Calculate</button>
+        <div id="output" class="budget-output"></div>
     </div>
     <div class="item-list-container">
         <div class="Item-list-wrapper">
@@ -49,7 +50,6 @@
             <!-- double click to remove each one -->
                 <h3>Packing list</h3>
                 <ul id="item-list">
-
                 </ul>
             </div>
         </div>
@@ -70,6 +70,8 @@
         <p>Created by Martin Štrekelj - Web Development HW1 </p>
     </footer>
     <script src="script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXFI4LIeSBZM8gCj2L8SE9QoOJvlBd794&callback=myMap"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXFI4LIeSBZM8gCj2L8SE9QoOJvlBd794&callback=initMap">
+    </script>
 </body>
 </html>
