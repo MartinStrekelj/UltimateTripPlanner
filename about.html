@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About</title>
 </head>
 <body>
-    
+    <a href="index.html"> <- Nazaj na aplikacijo</a>
+    <h1>1. Domača naloga</h1>
+    <pre>
+        Za nalogo sem izdelal trip planner. Funkcionalnosti aplikacije so:
+         - na podlagi vpisanih inputov prikaže razdaljo med točko A in B na zemljevidu
+         - prikaže razdaljo v km med A in B
+         - izračuna budget, ki bo ostal uporabniku po stroških.
+            - uporabnik vpiše svoj celoten budget
+            - predvidene stroške poti (ceno goriva ter porabo avtomobila, razdaljo dobi od aplikacije)
+            - ter predvidene ostale stroške (nastanitev + ostalo)
+         - možnost pisanja spiska za (recimo) pakiranje.
+            - vsebino lahko dodamo
+            - jo prečrtamo z enojnim klikom
+            - jo izbrišemo z double click
+            - pobrišemo celoten spisek z clear all
+ 
+        Aplikacija uporabja napredno funckijo HTML geolocation in sicer vsebuje Google Maps Direction API in Google Maps Distance Matrix API.
+        Pri izdelavi naloge sem si pomagal z dokumentacijo na strani ter z example code snippet za uporabo:
+         - <a href="https://developers.google.com/maps/documentation/javascript/directions">Directions API</a>
+         - <a href="https://developers.google.com/maps/documentation/javascript/distancematrix">Distance Matrix API</a>
+        Ostale funkcionalsti (DOM manipulation, računanje, pomožne funkcije) sem implementiral in napisal <b>sam</b>.
+        
+        Layout celotne strani je postavljen z CSS grid tehnologijo. Implemetirana sta dva layouta:
+         - mobile (do 992px širine)
+         - desktop (>992px širine)
+        Pri implementaciji te sem si pomagal z guide:
+         - <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">A Complete Guide to Grid</a>
+
+        Barvno paleto sem si oblikoval na:
+        - <a href="https://coolors.co/">Coolors</a>
+        
+        </pre>
+
 </body>
 </html>

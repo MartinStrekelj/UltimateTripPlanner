@@ -50,7 +50,6 @@ getDistance = () => {
     if (status == 'OK'){
       const distance = response.rows[0].elements[0].distance.text
       document.getElementById("distance-label").innerText = "Gas (distance = " + distance + ")";
-      calculateBudget();
     } else{
       alert ("Error was: " + status);
     }
@@ -90,6 +89,8 @@ calculateBudget = () =>{
     }
     console.log(outputMSG)
     document.getElementById("output").innerText = outputMSG;
+  }else{
+    alert("Please enter your full trip budget.")
   }
 } 
 
@@ -131,5 +132,4 @@ document.getElementById("add-item-btn").addEventListener("click", () => {
 
 document.getElementById("clear-list-btn").addEventListener("click", clear_all);
 
-// Error detection!
 
